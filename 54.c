@@ -1,27 +1,19 @@
-//Swap two numbers using functions (call-by-value method).//
-
-
-#include <stdio.h>
-void swap( int a, int b );
-
-int main( ) {
-	int a, b;
-	
-	printf( " Enter two numbers: " );
-	scanf( "%d %d", &a, &b );
-	
-	printf( "Entered : %d %d ", a, b );
-	
-	swap( a, b );
-
-	return 0;
+#include<stdio.h>
+int main()
+{
+	int x,y;
+	printf("enter the two numbers \n");
+	scanf("%d%d",&x,&y);
+	printf("numbers before swapping are %d and %d \n",x,y);
+	swap(x,y);
+	//printf("%d%d",x,y);
 }
-
-void swap( int a, int b ) {
-	a = a + b;
-	b = a - b;
-	a = a - b;
 	
-	printf( "Swapped : %d %d ", a, b );
-}
-
+	void swap(int x,int y)
+	{
+		int temp;
+		temp=x;
+		x=y;
+		y=temp;
+		printf("the numbers after swapping are %d and %d",x,y);
+	}
